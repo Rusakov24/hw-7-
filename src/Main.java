@@ -1,0 +1,60 @@
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Задание 1");
+        int savings = 0;
+        int monthlySavings = 15000;
+        int targetAmount = 2459000;
+        int month = 0;
+        while (savings < targetAmount) {
+            month++;
+            savings += monthlySavings;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + savings + " рублей");
+        }
+        System.out.println("Задание 2");
+        int i = 1;
+        while (i <= 10) {
+            System.out.print(i + " ");
+            i++;
+        }
+        System.out.println();
+        for (int j = 10; j >= 1; j--) {
+            System.out.print(j + " ");
+        }
+        System.out.println();
+        System.out.println("Задание 3");
+        int population = 12000000;
+        double birthRate = 17.0 / 1000.0;
+        double deathRate = 8.0 / 1000.0;
+        for (int year = 1; year <= 10; year++) {
+            int births = (int)(population * birthRate);
+            int deaths = (int)(population * deathRate);
+            population += (births - deaths);
+            System.out.println("Год " + year + ", численность населения составляет " + population + " человек.");
+        }
+        System.out.println("Задание 4");
+        long initialDeposit = 15000;
+        long target = 12000000;
+        double monthlyInterestRate = 0.07;
+        int mounth = 0;
+        double currentAmount = initialDeposit;
+        while (currentAmount < targetAmount) {
+            mounth++;
+            currentAmount += currentAmount * monthlyInterestRate;
+            System.out.println("Месяц " + mounth + ", сумма накоплений составляет " + currentAmount + " рублей.");
+        }
+        System.out.println("Задание 5");
+        double initialDeposit2 = 15000;
+        double targetAmount2 = 12000000;
+        double monthlyInterestRate2 = 0.07;
+        int month2 = 0;
+        double currentAmount2 = initialDeposit2;
+        while (currentAmount2 < targetAmount2) {
+            month++;
+            currentAmount2 += currentAmount2 * monthlyInterestRate2;
+            if (month2 % 6 == 0) {
+                System.out.println("Месяц " + month2 + ", сумма накоплений составляет " + currentAmount2 + " рублей.");
+
+        }
+            }
+    }
+}
