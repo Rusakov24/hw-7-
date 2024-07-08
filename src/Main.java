@@ -26,8 +26,8 @@ public class Main {
         double birthRate = 17.0 / 1000.0;
         double deathRate = 8.0 / 1000.0;
         for (int year = 1; year <= 10; year++) {
-            int births = (int)(population * birthRate);
-            int deaths = (int)(population * deathRate);
+            int births = (int) (population * birthRate);
+            int deaths = (int) (population * deathRate);
             population += (births - deaths);
             System.out.println("Год " + year + ", численность населения составляет " + population + " человек.");
         }
@@ -36,25 +36,54 @@ public class Main {
         long target = 12000000;
         double monthlyInterestRate = 0.07;
         int mounth = 0;
-        double currentAmount = initialDeposit;
+        var currentAmount = initialDeposit;
         while (currentAmount < targetAmount) {
             mounth++;
             currentAmount += currentAmount * monthlyInterestRate;
             System.out.println("Месяц " + mounth + ", сумма накоплений составляет " + currentAmount + " рублей.");
         }
         System.out.println("Задание 5");
-        double initialDeposit2 = 15000;
-        double targetAmount2 = 12000000;
+        long initialDeposit2 = 15000;
+        long targetAmount2 = 12000000;
         double monthlyInterestRate2 = 0.07;
         int month2 = 0;
-        double currentAmount2 = initialDeposit2;
+        var currentAmount2 = initialDeposit2;
         while (currentAmount2 < targetAmount2) {
             month++;
             currentAmount2 += currentAmount2 * monthlyInterestRate2;
             if (month2 % 6 == 0) {
                 System.out.println("Месяц " + month2 + ", сумма накоплений составляет " + currentAmount2 + " рублей.");
-
-        }
+                ;
             }
+            System.out.println("Задание 6");
+            var initialDeposit3 = 15000;
+            var monthlyInterestRate3 = 0.07;
+            int totalMonths3 = 9 * 12;
+
+            long currentAmount3 = initialDeposit3;
+            for (int month3 = 1; month3 <= totalMonths3; month3++) {
+                currentAmount3 += currentAmount3 * monthlyInterestRate3;
+                if (month3 % 6 == 0) {
+                    System.out.println("Месяц " + month3 + ", сумма накоплений составляет " + currentAmount3 + " рублей.");
+                }
+                int firstFriday = 3;
+                int daysInMonth = 31;
+                int currentDay = firstFriday;
+                while (currentDay <= daysInMonth) {
+                    System.out.println("Сегодня пятница, " + currentDay + "-е число. Необходимо подготовить отчет.");
+                    currentDay += 7;
+                }
+                System.out.println("Задание 8");
+                int currentYear = 2024;
+                int startYear = currentYear - 200;
+                int endYear = currentYear + 100;
+                int cometPeriod = 79;
+                for (int year = startYear; year <= endYear; year++) {
+                    if (year % cometPeriod == 0) {
+                        System.out.println(year);
+                    }
+                }
+            }
+        }
     }
 }
